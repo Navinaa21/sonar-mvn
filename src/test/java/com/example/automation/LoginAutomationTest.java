@@ -18,9 +18,9 @@ public class LoginAutomationTest {
             // Navigate to the login page
             driver.get("https://github.com/login");
             // Locate the username and password fields
-            WebElement usernameField = driver.findElement(By.id("username"));
+            WebElement usernameField = driver.findElement(By.id("login_field"));
             WebElement passwordField = driver.findElement(By.id("password"));
-            WebElement loginButton = driver.findElement(By.id("submit"));
+            WebElement loginButton = driver.findElement(By.name("commit"));
             // Perform login
             usernameField.sendKeys("testUser");
             passwordField.sendKeys("testPassword");
