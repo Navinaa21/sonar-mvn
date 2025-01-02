@@ -26,7 +26,7 @@ public class LoginAutomationTest {
             passwordField.sendKeys("Hey12345h");
             loginButton.click();
             // Validate successful login
-            String expectedTitle = "GitHub Dashboard";
+            String expectedTitle = "GitHub";
             String actualTitle = driver.getTitle();
             assertEquals(expectedTitle, actualTitle);
         } finally {
