@@ -16,17 +16,17 @@ public class LoginAutomationTest {
         WebDriver driver = new ChromeDriver();
         try {
             // Navigate to the login page
-            driver.get("https://github.com/login");
+            driver.get("https://practicetestautomation.com/practice-test-login/");
             // Locate the username and password fields
-            WebElement usernameField = driver.findElement(By.id("login_field"));
+            WebElement usernameField = driver.findElement(By.id("username"));
             WebElement passwordField = driver.findElement(By.id("password"));
-            WebElement loginButton = driver.findElement(By.name("commit"));
+            WebElement loginButton = driver.findElement(By.id("submit"));
             // Perform login
-            usernameField.sendKeys("heyitsmeh1");
-            passwordField.sendKeys("Hey12345h");
+            usernameField.sendKeys("student");
+            passwordField.sendKeys("Password123");
             loginButton.click();
             // Validate successful login
-            String expectedTitle = "GitHub";
+            String expectedTitle = "Logged In Successfully | Practice Test Automation";
             String actualTitle = driver.getTitle();
             assertEquals(expectedTitle, actualTitle);
         } finally {
