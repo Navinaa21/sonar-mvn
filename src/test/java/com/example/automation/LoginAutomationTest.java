@@ -18,12 +18,12 @@ public class LoginAutomationTest {
             // Navigate to the login page
             driver.get("https://github.com/login");
             // Locate the username and password fields
-            WebElement usernameField = driver.findElement(By.id("heyitsmeh1"));
-            WebElement passwordField = driver.findElement(By.id("Hey12345h"));
+            WebElement usernameField = driver.findElement(By.id("login_field"));
+            WebElement passwordField = driver.findElement(By.id("password"));
             WebElement loginButton = driver.findElement(By.name("commit"));
             // Perform login
-            usernameField.sendKeys("testUser");
-            passwordField.sendKeys("testPassword");
+            usernameField.sendKeys("heyitsmeh1");
+            passwordField.sendKeys("Hey12345h");
             loginButton.click();
             // Validate successful login
             String expectedTitle = "GitHub Dashboard";
