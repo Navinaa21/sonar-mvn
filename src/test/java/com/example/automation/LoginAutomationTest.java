@@ -10,6 +10,7 @@ public class LoginAutomationTest {
     @Test
     public void testLogin() {
         // Set up the WebDriver
+        System.out.println("ChromeDriver Path: " + System.getenv("CHROMEDRIVER_PATH"));
         System.setProperty("webdriver.chrome.driver", System.getenv("CHROMEDRIVER_PATH"));
         // WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
