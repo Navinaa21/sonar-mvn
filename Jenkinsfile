@@ -28,7 +28,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube') { // Ensure this matches your SonarQube configuration
                     bat """
-                         mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar ^
+                         mvn sonar:sonar ^
                         -Dsonar.projectKey=sonar-test ^
                         -Dsonar.sources=src/main/java ^
                         -Dsonar.tests=src/test/java ^
