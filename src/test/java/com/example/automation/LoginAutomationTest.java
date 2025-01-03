@@ -3,13 +3,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import com.example.Main;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 public class LoginAutomationTest {
     @Test
     public void testLogin() {
         // Set up the WebDriver
+        assertTrue(Main.login("student", "Password123"), "Login should succeed for valid credentials.");
+
+        // Test with incorrect credentials
+        assertFalse(Main.login("wrongUser", "wrongPass"), "Login should fail for invalid credentials.");
         System.out.println("ChromeDriver Path: " + System.getenv("CHROMEDRIVER_PATH"));
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Naveena G\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         // WebDriverManager.chromedriver().setup();
