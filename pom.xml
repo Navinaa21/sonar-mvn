@@ -14,9 +14,6 @@
         <sonar.projectKey>sonar-test</sonar.projectKey>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
         <sonar.login>${env.SONAR_TOKEN}</sonar.login>
-        <sonar.tests>src/test/java/com/example/automation</sonar.tests>
-        <sonar.test.inclusions>**/*.java</sonar.test.inclusions>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
 
