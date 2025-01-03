@@ -32,7 +32,6 @@ pipeline {
                         -Dsonar.projectKey=sonar-test ^
                         -Dsonar.sources=src/main/java ^
                         -Dsonar.tests=src/test/java ^
-                        -Dsonar.test.inclusions=src/test/java/com/example/automation/*.java ^
                         -Dsonar.junit.reportPaths=target/surefire-reports ^
                         -Dsonar.jacoco.reportPaths=target/site/jacoco/jacoco.xml ^
                         -Dsonar.pmd.reportPaths=target/pmd-duplicates.xml ^
