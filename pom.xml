@@ -51,7 +51,27 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>      
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.14.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>pmd</goal>
+                        </goals>
+                        <configuration>
+                            <!-- PMD Configuration for Duplication -->
+                            <rulesets>
+                                <ruleset>rulesets/java/duplicates.xml</ruleset>
+                            </rulesets>
+                            <outputFile>target/pmd-duplicates.xml</outputFile>
+                            <generateHtmlReport>false</generateHtmlReport>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
