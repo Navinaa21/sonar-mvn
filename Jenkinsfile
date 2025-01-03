@@ -30,7 +30,7 @@ pipeline {
                     bat """
                          mvn sonar:sonar ^
                         -Dsonar.projectKey=sonar-test ^
-                        -Dsonar.sources=src/main/java ^
+                        -Dsonar.sources=src/test/java ^
                         -Dsonar.tests=src/test/java ^
                         -Dsonar.junit.reportPaths=target/surefire-reports ^
                         -Dsonar.jacoco.reportPaths=target/site/jacoco/jacoco.xml ^
