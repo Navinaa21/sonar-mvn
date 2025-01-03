@@ -14,11 +14,16 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build and Test') {
+        stage('Build') {
             steps {
-                bat 'mvn clean verify' // Run tests and generate JaCoCo reports
+                bat 'mvn clean package'
             }
         }
+        stage('Run Tests') {
+              steps {
+                  bat 'mvn clean test'
+              }
+          }
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarqube') { // Ensure this matches your SonarQube configuration
